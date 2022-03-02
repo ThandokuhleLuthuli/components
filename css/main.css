@@ -1,0 +1,771 @@
+/*! HTML5 Boilerplate v7.2.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.2;
+  height: 100%;
+  width: 100%; 
+  margin: 0;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+   @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+   
+   body {
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    width: 100%; 
+    margin: 0;
+
+   }
+h3 {
+text-align: center;
+font-size: 45px;
+font-weight: bold;
+padding-left: 10px;
+padding-right: 10px;
+}
+.white { 
+  color:white;
+}
+@media (max-width: 500px) {
+  h3.white,
+  .black {
+    font-size: 35px;
+  }
+}
+.black {
+ color:black;
+}
+p {
+  font-weight: 100;
+  letter-spacing: 0.5px;
+  text-align:center;
+  margin-top:0;
+  font-size:13px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom:0;
+  padding-bottom:0;
+}
+.notice  , .privacy-policy {
+  font-size: .65em;
+  color:white;
+}
+.right-box{
+  background: #cb2d3e;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(top, #ef473a 31%, #cb2d3e 100%);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(top, #ef473a 31%, #cb2d3e 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 10px;
+  width: 50%;
+  padding-bottom: 50px;
+}
+.left-box{
+  border-radius: 10px;
+  background-color:white;
+  width: 50%;
+  padding-bottom: 50px;
+}
+.form-wrap {
+  margin: 50px auto 50px auto;
+  display: flex;
+  box-shadow: 1px 8px 20px black;
+  border-radius: 10px;
+}
+@media (max-width: 500px) {
+  .form-wrap{
+    flex-direction: column;
+  }
+}
+.form-wrap-small {
+  max-width: 700px;
+}
+.form-wrap-medium {
+  max-width:1000px;
+}
+
+div.form-box,.cta-box{
+  
+}
+.sign-in,.cta-left{
+  width: 100%;
+    margin: 0 auto;
+}
+.input-box  p {
+  padding-bottom: 10px;
+}
+input[type=email], input[type=password]{
+  display:block;
+  padding:10px;
+  width:250px;
+  margin-bottom:12px;
+  background-color: #eee;
+  border:none;
+  margin: 0 auto 10px auto;
+
+}
+
+input[type=email], input[type=password]:focus {
+  outline-color:#ef473a;
+   
+}
+::placeholder{
+  font-size: 12px;;
+}
+button {
+  border-radius: 20px;
+  padding: 15px;
+  color:white;
+  font-size: 11px;
+  font-weight:500;
+  width:150px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  display: block;
+  margin:0 auto;
+  cursor: pointer;
+
+}
+button:focus{
+  outline: none;
+}
+.btn-clear{
+border:none;
+background-color: #ef473a;
+margin-top: 20px;
+}
+
+.btn-fill{
+  border: 1px solid white;
+  background-color:rgba(0,0,0,0);
+  margin-top: 20px;
+}
+p a{
+   text-decoration: none;
+   color:black;
+   text-align: center;
+   font-size: 15px;
+}
+p a:hover{
+  color:#ef473a;
+}
+.icon{
+  width:20px;
+  height: 20px;
+}
+.third-party li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px;
+  border:1px solid black;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.third-party li:hover {
+  border: 1px solid #ef473a;
+  transition: border .3s ease-in;
+}
+.third-party {
+  margin: 0 auto;
+  width: 200px;
+  display: flex;
+  padding-bottom: 20px;
+}
+
+/* Everything card UI*/
+.card-wrap{
+  max-width: 350px;
+  margin: 30px auto 0 auto;
+  box-shadow: 1px 8px 20px black;
+  background-color:white;
+}
+.cookies{
+  width:100%;
+  height: auto;
+}
+
+.txt-box  p{
+  padding: 20px
+}
+.txt-title{
+  font-size: 22px;
+  margin-bottom:0px;
+}
+
+.form-section, .spotify-section ,.card-section ,.morphic-section,.nameTag-section{
+width:100%;
+height: 100vh;
+overflow-y: auto;
+}
+.form-section{
+  background-color:#ef473a;
+}
+.spotify-section {
+  background: linear-gradient(to bottom right ,	#08E188,	#189263);
+}
+.nameTag-section {
+  background-color: #2209ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nameTag {
+  width:450px;
+  height: 250px;
+  border: 3px solid white;
+  
+}
+.attribute-1 {
+  width: 100%;
+}
+.attribute-1 p {
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-left:20px;
+  text-align: start;
+}
+.attribute-1 p:nth-child(1) {
+  font-weight: 400;
+  font-size: 1.4em;
+
+}
+
+.attribute-1 p:nth-child(2) {
+  display: flex;
+
+}
+
+
+.attribute-2 {
+  width:100%;
+  border-top:3px solid white;
+ 
+}
+.attribute-2 p {
+  padding:20px 20px 0 20px;
+  text-align: start;
+}
+.attribute-2 p:nth-child(2) {
+  padding:0 20px 20px 20px;
+}
+
+.nameTag-box {  
+ display: flex;
+}
+
+.nameTage-initial {
+  width: 200px;
+  height: 150px;
+  border-right: 3px solid white;
+}
+.nameTage-initial p {
+   color:white;
+   font-size:8em;
+   padding:0;
+}
+
+.att-text {
+  color:white ;
+  font-size: 1.2em; 
+  font-weight: 400;
+ 
+}
+.att-text a {
+  display: block;
+  margin-right:10px;
+}
+
+.att-text_border {
+  border-bottom:3px solid white;
+  
+
+}
+.ig {
+  width:20px;
+  height: 20px ;
+
+}
+
+.ig-link {
+
+}
+
+
+.card-section {
+  background-color: #c37836;
+}
+.left-box-green{ 
+  position: relative;
+  height: 100%;
+}
+.left-box-green {
+background:linear-gradient(to bottom right,#5FED99,#30CC67);
+border-radius: 10px 0px 0px 10px;
+width: 45%;
+}
+.right-box-grey {
+ background:linear-gradient(to bottom right,#2D5E6C,	#112E34);
+ border-radius: 0px 10px 10px 0px;
+ width:55%;
+}
+
+@media(max-width: 500px) {
+  .left-box,
+  .right-box,
+  .left-box-green,
+  .right-box-grey {
+    width: 100%;
+  }
+} 
+
+.word-box {
+  padding: 50px 30px 50px 30px;
+  
+}
+
+@media screen and (max-width:600px){
+.word-box {
+/* padding-bottom:20px; */
+ }
+}
+.word-box h3 , .word-box h2{
+  color:white;
+}
+.word-box h3 {
+  font-size:32px;
+  margin-bottom:10px;
+  margin-top:10px;
+}
+.word-box h2 {
+  margin-top: 0;
+  margin-bottom:5px;
+  font-size: 20px;
+  text-align: center;
+}
+.price-box span {
+  margin-top: 22px;
+  margin-right:100px;
+  margin-left: -70px;
+}
+.offers,.trial{
+  color:white;
+  letter-spacing: normal;
+  padding-left:40px;
+  word-spacing: 1px;
+}
+.offers {
+  word-spacing: normal;
+}
+.trial {
+  padding-top:0px;
+  word-spacing: 1px !important;
+}
+ul li{
+  color:white;
+}
+.bold {
+  color:white;
+  font-weight: bold;
+}.price-box {
+  color:white;
+  display: flex;
+  justify-content: space-evenly;
+}
+.price-box h3{
+  text-align: unset;
+}
+.benefits li {
+  padding-bottom: 20px;
+  font-size: 13px;
+  font-weight: 600;
+
+}
+.price-box .price {
+  font-size: 28px;
+  margin-top: 10px;
+}
+.logo-box{
+  display: flex;
+  padding-top:47px;
+  padding-left:47px;
+}
+.logo{
+  position: relative;
+    display: block;
+    width: 200px;
+    height: auto;
+}
+.benefits {
+  padding-left:85px;
+}
+.form-box-2 {
+  width:100%;
+}
+.spotify-form {
+display: flex;
+flex-direction: column;
+margin-left:50px
+}
+.spotify-form label {
+display: inline-block;
+text-transform: uppercase;
+color: white;
+font-weight: bold;
+
+}
+
+.s-input {
+  display: inline-block;
+  margin: 15px 0px 20px 0px !important;
+  background-color: rgba(0,0,0,0) !important;
+  border:none !important;
+  border-bottom: 1.2px solid 	#6a888e!important;
+  outline: none !important; 
+  padding: 0 !important;
+  width:250px;
+}
+
+
+.signIn {
+  color: white;
+  display:inline-flex;
+}
+
+.signIn-box {
+display: flex;
+}
+.signIn-r::before{
+  content:'';
+  width:2px;
+  position: relative;
+  display: block; 
+  height: 100%;
+  background-color:#3f9e7b;
+  margin-right:10px;
+  margin-left:10px;
+
+}
+.signIn-l {
+  font-weight: lighter;
+  color:#5f8591;
+ 
+}
+.s-input::placeholder {
+color:	#6a888e;
+font-size:13px;
+
+}
+.btn-signUp {
+  color: 	#6dd294;
+  margin: 0 !important;
+}
+input[type=radio]::outline{
+  background-color:#3f9e7b;
+}
+
+/* neomorphic happy*/
+
+.main {
+  display:flex;
+  justify-content:center;
+  background-color:#f9fa30;
+  height:100%;
+}
+
+.card-2 {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:20%;
+  background-color:#f9fa30;
+  margin-top:40px;
+  margin-bottom:40px;
+  border-radius:50px;
+  box-shadow:  7px 7px 9px #90911c, 
+             -7px -7px 9px #ffff44;
+  max-height: 70%;
+  height: 60%;
+              
+ }
+ .card-element {
+  width:150px;
+  height:150px;
+  background-color:#f9fa30;
+  box-shadow:  inset 5px 5px 4px #646413, 
+               inset -5px -5px 4px #ffff4d;
+ border-radius: 50%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+}
+
+.card-element_img {
+position: relative;
+width:100%;
+height: 100%;
+background-image: url('/img/happy_boy_black_and_yellow.png');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+  display: none !important;
+}
+ 
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+* Extends the .sr-only class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
